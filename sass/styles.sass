@@ -14,7 +14,7 @@ $terceary-color: #FDDB57
   line-height: 21px
 
 @mixin normalHeaderText
-  font-family: 'League Gothic'
+  font-family: 'Lato'
   font-style: normal
   font-weight: 500
   font-size: 53px
@@ -53,6 +53,7 @@ body
       display: flex
       flex: 1
       align-items: center
+      justify-content: center
 
       ul
         display: flex
@@ -188,10 +189,11 @@ body
 
   .header-our-plans
     background: url(../imgs/our-plans-header-bg.png) no-repeat
-    background-size: 100% 130%
-    background-position: center -19px
+    background-size: contain
+    background-color: #F7A301
+    background-position: center right
     width: calc(100% - $vertical-space)
-    height: 150px
+    height: 172px
     display: flex
     justify-content: flex-start
     align-items: center
@@ -200,12 +202,12 @@ body
     > h1
       @include normalHeaderText
       color: #fff
-      text-transform: uppercase
       display: flex
 
   .content-our-plans
     background: url(../imgs/bg-our-plans.png) no-repeat
-    background-size: cover
+    background-size: 100%
+    background-position: bottom
     width: calc(100% - $vertical-space)
     height: 100vh
     display: flex
@@ -303,9 +305,12 @@ body
     display: flex
     flex: 1
     height: 100%
+    width: 100%
 
     img
       width: 80%
+      object-fit: contain
+      object-position: bottom
 
   .content-get-lead-1
     display: flex
@@ -345,11 +350,30 @@ body
 
 #frequently-questions
   background: url(../imgs/bg-frequently-questions.png) no-repeat
-  background-size: cover
+  background-size: 100%
+  background-position: bottom
   width: calc(100% - $vertical-space)
-  height: 100vh
+  height: calc(100vh)
   display: flex
-  flex-direction: row
+  flex-direction: column
   justify-content: flex-start
-  align-items: center
   padding: 0 $vertical-space
+
+  > header > h1
+    @include normalHeaderText
+    color: $secondary-color
+    display: flex
+    margin: 36px 0
+
+  .content
+    display: flex
+    flex: 1
+    height: calc(100vh)
+    flex-direction: column
+    justify-content: flex-start
+    align-items: flex-start
+    margin-top: 73px
+
+    .img-frequently-questions
+
+    .content-frequently-questions

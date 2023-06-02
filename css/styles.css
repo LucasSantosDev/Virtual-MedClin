@@ -28,7 +28,8 @@ body {
     #home .menu .nav {
       display: flex;
       flex: 1;
-      align-items: center; }
+      align-items: center;
+      justify-content: center; }
       #home .menu .nav ul {
         display: flex;
         flex-direction: row;
@@ -59,7 +60,7 @@ body {
       align-items: flex-start;
       margin-top: 130px; }
       #home .content-home .text-header h1 {
-        font-family: 'League Gothic';
+        font-family: 'Lato';
         font-style: normal;
         font-weight: 500;
         font-size: 53px;
@@ -123,7 +124,7 @@ body {
     justify-content: center;
     align-items: flex-start; }
     #about .content-about > h1 {
-      font-family: 'League Gothic';
+      font-family: 'Lato';
       font-style: normal;
       font-weight: 500;
       font-size: 53px;
@@ -170,26 +171,27 @@ body {
   flex: 1; }
   #our-plans .header-our-plans {
     background: url(../imgs/our-plans-header-bg.png) no-repeat;
-    background-size: 100% 130%;
-    background-position: center -19px;
+    background-size: contain;
+    background-color: #F7A301;
+    background-position: center right;
     width: calc(100% - $vertical-space);
-    height: 150px;
+    height: 172px;
     display: flex;
     justify-content: flex-start;
     align-items: center;
     padding: 0 130px; }
     #our-plans .header-our-plans > h1 {
-      font-family: 'League Gothic';
+      font-family: 'Lato';
       font-style: normal;
       font-weight: 500;
       font-size: 53px;
       line-height: 64px;
       color: #fff;
-      text-transform: uppercase;
       display: flex; }
   #our-plans .content-our-plans {
     background: url(../imgs/bg-our-plans.png) no-repeat;
-    background-size: cover;
+    background-size: 100%;
+    background-position: bottom;
     width: calc(100% - $vertical-space);
     height: 100vh;
     display: flex;
@@ -216,7 +218,7 @@ body {
     align-items: flex-start;
     margin-top: 130px; }
     #explanation .text-explanation > h1 {
-      font-family: 'League Gothic';
+      font-family: 'Lato';
       font-style: normal;
       font-weight: 500;
       font-size: 53px;
@@ -292,15 +294,18 @@ body {
   #get-lead-1 .img-get-lead-1 {
     display: flex;
     flex: 1;
-    height: 100%; }
+    height: 100%;
+    width: 100%; }
     #get-lead-1 .img-get-lead-1 img {
-      width: 80%; }
+      width: 80%;
+      object-fit: contain;
+      object-position: bottom; }
   #get-lead-1 .content-get-lead-1 {
     display: flex;
     flex: 1;
     flex-direction: column; }
     #get-lead-1 .content-get-lead-1 h1 {
-      font-family: 'League Gothic';
+      font-family: 'Lato';
       font-style: normal;
       font-weight: 500;
       font-size: 53px;
@@ -341,11 +346,28 @@ body {
 
 #frequently-questions {
   background: url(../imgs/bg-frequently-questions.png) no-repeat;
-  background-size: cover;
+  background-size: 100%;
+  background-position: bottom;
   width: calc(100% - $vertical-space);
-  height: 100vh;
+  height: calc(100vh);
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   justify-content: flex-start;
-  align-items: center;
   padding: 0 130px; }
+  #frequently-questions > header > h1 {
+    font-family: 'Lato';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 53px;
+    line-height: 64px;
+    color: #EB9B02;
+    display: flex;
+    margin: 36px 0; }
+  #frequently-questions .content {
+    display: flex;
+    flex: 1;
+    height: calc(100vh);
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    margin-top: 73px; }
