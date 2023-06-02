@@ -1,0 +1,12 @@
+{
+  "name": "virtual-med",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "scripts": {
+    "sass-watch": "node-sass -w sass/ -o css/"
+  },
+  "devDependencies": {
+    "node-sass": "^8.0.0"
+  }
+}
