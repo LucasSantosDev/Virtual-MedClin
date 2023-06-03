@@ -4,7 +4,8 @@
   padding: 0; }
 
 body {
-  width: 100%; }
+  width: 100%;
+  overflow-x: hidden; }
 
 #home {
   display: flex;
@@ -14,7 +15,7 @@ body {
   min-height: 100vh;
   background-image: url(../imgs/mobile/bg-home.png);
   background-repeat: no-repeat;
-  background-size: 100% 100%;
+  background-size: 100%;
   padding: 0 45px; }
   #home > header {
     display: flex;
@@ -50,7 +51,8 @@ body {
     margin-bottom: 79px; }
   #home .content .content-text > p {
     font-family: "Roboto";
-    font-size: 40px;
+    font-size: 30px;
+    font-weight: 350;
     line-height: 60px;
     color: #FFF;
     margin-bottom: 79px; }
@@ -124,6 +126,435 @@ body {
         color: #3E3E3E; }
   #about .content .content-image {
     display: flex;
-    align-items: center; }
+    align-items: center;
+    padding: 0 0 130px 0; }
     #about .content .content-image img {
       width: 1000px; }
+
+#our-plans {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  height: auto;
+  min-height: 100vh;
+  background-image: url(../imgs/mobile/bg-our-plans.png);
+  background-repeat: no-repeat;
+  background-size: 100%;
+  background-position: center;
+  padding: 0 0 130px 0; }
+  #our-plans .content .content-title {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start;
+    height: 550px;
+    padding: 0 45px;
+    background-color: #EB9B02; }
+    #our-plans .content .content-title > h1 {
+      font-family: "Lato";
+      font-size: 73px;
+      line-height: 80px;
+      font-style: normal;
+      font-weight: 500;
+      color: #FFF;
+      margin-top: 90px; }
+    #our-plans .content .content-title > img {
+      margin-top: 45px;
+      width: 100px; }
+  #our-plans .content .content-explanation {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: #31B5DA;
+    margin: 0 45px;
+    margin-top: -250px;
+    padding: 60px;
+    border-radius: 50px; }
+    #our-plans .content .content-explanation > img {
+      width: 140px;
+      margin-bottom: 50px; }
+    #our-plans .content .content-explanation > p {
+      font-family: "Roboto";
+      font-size: 35px;
+      text-align: center;
+      line-height: 60px;
+      font-style: normal;
+      font-weight: 400;
+      color: #FFF; }
+  #our-plans .content .content-plans {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 0 45px; }
+    #our-plans .content .content-plans .plan {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      width: 80%;
+      margin-top: 50px;
+      border-radius: 50px;
+      padding-bottom: 30px;
+      -webkit-box-shadow: 0px 0px 49px -16px rgba(0, 0, 0, 0.75);
+      -moz-box-shadow: 0px 0px 49px -16px rgba(0, 0, 0, 0.75);
+      box-shadow: 0px 0px 49px -16px rgba(0, 0, 0, 0.75);
+      background-color: #FFF; }
+      #our-plans .content .content-plans .plan header {
+        border-radius: 50px 50px 0 0;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        background-color: #31B5DA;
+        color: #FFF;
+        padding: 50px 0;
+        width: 100%;
+        font-family: "Roboto";
+        font-size: 50px; }
+        #our-plans .content .content-plans .plan header span {
+          margin-top: 15px;
+          font-weight: lighter; }
+      #our-plans .content .content-plans .plan > div {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        background-color: #FFF; }
+        #our-plans .content .content-plans .plan > div .price {
+          display: flex;
+          flex-wrap: nowrap;
+          justify-content: center;
+          align-items: center;
+          padding-top: 30px; }
+          #our-plans .content .content-plans .plan > div .price sup {
+            font-family: "Roboto";
+            color: #3E3E3E;
+            font-size: 40px;
+            padding-top: 30px;
+            float: left; }
+          #our-plans .content .content-plans .plan > div .price span {
+            font-family: "Lato";
+            font-size: 150px;
+            color: #EB9B02; }
+          #our-plans .content .content-plans .plan > div .price sub {
+            font-family: "Lato";
+            font-size: 80px;
+            color: #EB9B02; }
+        #our-plans .content .content-plans .plan > div .services {
+          padding: 30px 50px;
+          text-align: center;
+          font-family: "Roboto";
+          font-size: 43px;
+          color: #6B6B6B; }
+          #our-plans .content .content-plans .plan > div .services p {
+            padding: 30px 0;
+            font-weight: 350; }
+      #our-plans .content .content-plans .plan button {
+        background-color: #EB9B02;
+        color: #FFF;
+        border-width: 0px;
+        border-radius: 15px;
+        padding: 30px 0;
+        font-family: "Roboto";
+        font-size: 50px;
+        width: 90%; }
+
+#differential {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  height: auto;
+  min-height: 100vh;
+  background-image: url(../imgs/mobile/bg-differential.png);
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  padding: 0 45px; }
+  #differential .content .content-title {
+    padding-top: 90px; }
+    #differential .content .content-title > h1 {
+      font-family: "Lato";
+      font-size: 73px;
+      line-height: 80px;
+      font-style: normal;
+      font-weight: 500;
+      color: #FFF;
+      margin-bottom: 79px; }
+  #differential .content .content-text > p {
+    font-family: "Roboto";
+    font-size: 37px;
+    line-height: 60px;
+    color: #FFF;
+    margin-bottom: 79px; }
+    #differential .content .content-text > p label {
+      color: #FDDB57; }
+  #differential .content .content-items {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-bottom: 90px; }
+    #differential .content .content-items div {
+      display: flex;
+      align-items: center;
+      flex: 1;
+      margin: 50px 0; }
+      #differential .content .content-items div label {
+        font-family: "Lato";
+        font-size: 100px;
+        color: #31B5DA;
+        border-radius: 50%;
+        padding: 25px 55px;
+        background-color: #FFF; }
+      #differential .content .content-items div p {
+        font-family: "Roboto";
+        font-size: 50px;
+        font-weight: 400;
+        color: #FFF;
+        padding-left: 50px; }
+  #differential .content .content-image {
+    display: flex;
+    align-items: center;
+    padding: 0 0 130px 0; }
+    #differential .content .content-image img {
+      width: 1000px; }
+
+#get-lead {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  height: auto;
+  min-height: 50vh;
+  background-image: url(../imgs/mobile/bg-get-lead.png);
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  padding: 0 45px; }
+  #get-lead .content .content-title > h1 {
+    font-family: "Lato";
+    font-size: 73px;
+    line-height: 80px;
+    font-style: normal;
+    font-weight: 500;
+    color: #FFF;
+    margin-top: 180px; }
+  #get-lead .content .content-text > p {
+    font-family: "Roboto";
+    font-size: 37px;
+    line-height: 60px;
+    color: #FFF;
+    margin-top: 60px;
+    margin-bottom: 79px; }
+  #get-lead .content .content-image {
+    display: flex;
+    justify-content: center;
+    align-items: center; }
+    #get-lead .content .content-image img {
+      width: 100%; }
+  #get-lead .content .content-button-lead {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    background-color: #31B5DA;
+    padding: 30px 50px;
+    border-radius: 15px;
+    width: 600px;
+    margin-top: 60px;
+    margin-bottom: 79px; }
+    #get-lead .content .content-button-lead span {
+      font-family: "Roboto";
+      font-size: 50px;
+      color: #FFF; }
+
+#common-questions {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  height: auto;
+  min-height: 50vh;
+  background-image: url(../imgs/mobile/bg-common-questions.png);
+  background-repeat: no-repeat;
+  background-size: 100%;
+  background-position: center;
+  padding: 0 45px;
+  padding-bottom: 130px; }
+  #common-questions .content .content-title > h1 {
+    font-family: "Lato";
+    font-size: 73px;
+    line-height: 80px;
+    font-style: normal;
+    font-weight: 500;
+    color: #EB9B02;
+    margin-top: 180px; }
+  #common-questions .content .content-text > p {
+    font-family: "Roboto";
+    font-size: 37px;
+    line-height: 60px;
+    color: #3E3E3E;
+    margin-top: 60px;
+    margin-bottom: 79px; }
+  #common-questions .content .content-items .question {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 40px; }
+    #common-questions .content .content-items .question .question-title {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: center;
+      background-color: #31B5DA;
+      padding: 40px 30px;
+      width: calc(100% - 30px);
+      border-radius: 20px;
+      height: auto;
+      min-height: 100px;
+      cursor: pointer; }
+      #common-questions .content .content-items .question .question-title p {
+        color: #fff;
+        font-family: "Lato";
+        font-size: 43px; }
+      #common-questions .content .content-items .question .question-title img {
+        width: 50px;
+        margin-left: 18px; }
+    #common-questions .content .content-items .question .answer {
+      width: 90%;
+      background: #e4ebfa;
+      color: #3E3E3E;
+      font-family: "Lato";
+      font-size: 25px;
+      border-radius: 0 0 20px 20px;
+      padding: 35px 20px; }
+
+footer {
+  background: #31B5DA;
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  padding: 80px 45px; }
+  footer .head {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center; }
+    footer .head > div {
+      display: flex;
+      flex: 1;
+      justify-content: center; }
+      footer .head > div img {
+        width: 60%; }
+    footer .head p {
+      flex: 1;
+      font-family: "Roboto";
+      font-size: 40px;
+      font-weight: 400;
+      color: #FFF; }
+  footer .networks {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 120px; }
+    footer .networks h3 {
+      font-family: "Lato";
+      font-size: 53px;
+      font-style: normal;
+      font-weight: 500;
+      color: #FFF; }
+    footer .networks hr {
+      margin: 19px 0;
+      width: 50%;
+      background: #FFF; }
+    footer .networks .network-link {
+      display: flex;
+      flex-direction: row; }
+      footer .networks .network-link img {
+        width: 100px;
+        margin: 0 20px; }
+  footer .sac {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    margin-top: 120px; }
+    footer .sac h3 {
+      font-family: "Lato";
+      font-size: 53px;
+      font-style: normal;
+      font-weight: 500;
+      color: #FFF; }
+    footer .sac hr {
+      margin: 19px 0;
+      width: 80%;
+      background: #FFF; }
+    footer .sac .sac-link {
+      display: flex;
+      flex-direction: column; }
+      footer .sac .sac-link div {
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-start;
+        align-items: center;
+        margin: 15px 0; }
+        footer .sac .sac-link div img {
+          width: 80px;
+          margin-right: 20px; }
+        footer .sac .sac-link div span {
+          font-family: "Roboto";
+          font-size: 40px;
+          font-weight: 400;
+          color: #FFF; }
+  footer .contact {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    margin-top: 120px; }
+    footer .contact h3 {
+      font-family: "Lato";
+      font-size: 53px;
+      font-style: normal;
+      font-weight: 500;
+      color: #FFF; }
+    footer .contact hr {
+      margin: 19px 0;
+      width: 80%;
+      background: #FFF; }
+    footer .contact .contact-link {
+      display: flex;
+      flex-direction: column; }
+      footer .contact .contact-link div {
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-start;
+        align-items: center;
+        margin: 15px 0; }
+        footer .contact .contact-link div img {
+          width: 80px;
+          margin-right: 20px; }
+        footer .contact .contact-link div span {
+          font-family: "Roboto";
+          font-size: 40px;
+          font-weight: 400;
+          color: #FFF; }
+
+.copyright {
+  background-color: #000;
+  text-align: center;
+  font-family: "Roboto";
+  font-size: 40px;
+  font-weight: 400;
+  color: #FFF;
+  padding: 60px 0; }
+
+.ripple {
+  background-position: center;
+  transition: background 0.8s; }
+  .ripple:hover {
+    background: #47a7f5 radial-gradient(circle, transparent 1%, #47a7f5 1%) center/15000%; }
+  .ripple:active {
+    background-color: #6eb9f7;
+    background-size: 100%;
+    transition: background 0s; }
