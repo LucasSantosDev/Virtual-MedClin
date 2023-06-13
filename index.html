@@ -26,6 +26,27 @@
                     });
                 }, 1000)
             });
+
+            $('.common-questions-nav').click(function () {
+                scrollPage(document.querySelector('#common-questions'))
+            });
+
+            $('.about-nav').click(function () {
+                scrollPage(document.querySelector('#about'))
+            });
+
+            $('.differential-nav').click(function () {
+                scrollPage(document.querySelector('#differential'))
+            });
+
+            function scrollPage(content) {
+                setTimeout(() => {
+                    content.scrollIntoView({
+                        behavior: "smooth",
+                        block: "start"
+                    });
+                }, 300)
+            }
         })
 
         function openURL(url, newTab) {
@@ -46,10 +67,10 @@
             </div>
             <div class="normal-menu">
                 <ul>
-                    <li><a href="">Sobre</a></li>
-                    <li><a href="">Diferências</a></li>
-                    <li><a href="">Depoimentos</a></li>
-                    <li><a href="">Perguntas Frequentes</a></li>
+                    <li><a class="about-nav" href="#">Sobre</a></li>
+                    <li><a class="differential-nav" href="#">Diferências</a></li>
+                    <li><a class="-nav" href="#">Depoimentos</a></li>
+                    <li><a class="common-questions-nav" href="#">Perguntas Frequentes</a></li>
                     <li><a href="https://consultorio.virtualmedclin.com.br/login">Fazer Login</a></li>
                 </ul>
             </div>
@@ -98,21 +119,25 @@
                     </p>
                 </div>
                 <div class="content-items">
-                    <div>
-                        <img src="./imgs/about-item-1.png" alt="Atendimento 24 horas">
-                        <span>Atendimento 24 horas</span>
+                    <div class="row">
+                        <div>
+                            <img src="./imgs/about-item-1.png" alt="Atendimento 24 horas">
+                            <span>Atendimento 24 horas</span>
+                        </div>
+                        <div>
+                            <img src="./imgs/about-item-2.png" alt="Sem Carência">
+                            <span>Sem Carência</span>
+                        </div>
                     </div>
-                    <div>
-                        <img src="./imgs/about-item-2.png" alt="Sem Carência">
-                        <span>Sem Carência</span>
-                    </div>
-                    <div>
-                        <img src="./imgs/about-item-4.png" alt="Avaliação e Prescrição">
-                        <span>Avaliação e Prescrição</span>
-                    </div>
-                    <div>
-                        <img src="./imgs/about-item-3.png" alt="Encaminhamento médico">
-                        <span>Encaminhamento médico</span>
+                    <div class="row">
+                        <div>
+                            <img src="./imgs/about-item-4.png" alt="Avaliação e Prescrição">
+                            <span>Avaliação e Prescrição</span>
+                        </div>
+                        <div>
+                            <img src="./imgs/about-item-3.png" alt="Encaminhamento médico">
+                            <span>Encaminhamento médico</span>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -299,7 +324,7 @@
                 </div>
             </div>
             <div class="content-video">
-                <iframe width="100%" height="100%" src="https://www.youtube.com/embed/aSY4R3dd-2I"
+                <iframe width="100%" height="80%" src="https://www.youtube.com/embed/aSY4R3dd-2I"
                     title="Vem pra Virtual Med Clin!" frameborder="0"
                     allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
                     allowfullscreen></iframe>

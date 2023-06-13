@@ -123,24 +123,29 @@ body {
       flex-direction: column;
       justify-content: center;
       margin-bottom: 90px; }
-      #about .content .content-items div {
+      #about .content .content-items .row {
         display: flex;
-        align-items: center;
         flex: 1;
-        margin-bottom: 30px; }
-        #about .content .content-items div img {
-          width: 230px;
-          padding-right: 30px; }
-        #about .content .content-items div span {
-          font-family: "Roboto";
-          font-size: 45px;
-          color: #3E3E3E; }
+        flex-direction: column; }
+        #about .content .content-items .row div {
+          display: flex;
+          align-items: center;
+          flex: 1;
+          margin-bottom: 30px; }
+          #about .content .content-items .row div img {
+            width: 230px;
+            padding-right: 30px; }
+          #about .content .content-items .row div span {
+            font-family: "Roboto";
+            font-size: 45px;
+            color: #3E3E3E; }
     #about .content .content-image {
       display: flex;
       align-items: center;
+      justify-content: center;
       padding: 0 0 130px 0; }
       #about .content .content-image img {
-        width: 1000px; }
+        width: 100%; }
   #our-plans {
     display: flex;
     flex-direction: column;
@@ -310,7 +315,7 @@ body {
         display: flex;
         align-items: center;
         flex: 1;
-        margin: 50px 0; }
+        margin: 30px 0; }
         #differential .content .content-items div label {
           font-family: "Lato";
           font-size: 100px;
@@ -675,7 +680,9 @@ body {
     padding: 0 100px; }
     #about .content {
       display: flex;
-      flex-direction: row-reverse; }
+      flex-direction: row-reverse;
+      justify-content: center;
+      align-items: center; }
       #about .content > div {
         display: flex;
         flex-direction: column;
@@ -694,7 +701,7 @@ body {
         font-family: "Roboto";
         font-size: 23px;
         font-weight: 350;
-        line-height: 40px;
+        line-height: 30px;
         color: #3E3E3E;
         margin-bottom: 30px; }
       #about .content .content-items {
@@ -716,9 +723,9 @@ body {
             color: #3E3E3E; }
       #about .content .content-image {
         display: flex;
-        align-items: center;
+        align-items: flex-start;
         justify-content: center;
-        padding: 0 0 130px 0; }
+        padding: 0; }
         #about .content .content-image img {
           width: 450px; }
   #our-plans {
@@ -843,7 +850,7 @@ body {
                 font-size: 27px;
                 color: #EB9B02; }
             #our-plans .content .content-plans .plan > div .services {
-              padding: 10px 70px;
+              padding: 10px 50px;
               text-align: center;
               font-family: "Roboto";
               font-size: 16px;
@@ -852,7 +859,7 @@ body {
                 display: none; }
               #our-plans .content .content-plans .plan > div .services p {
                 text-align: left;
-                padding: 10px 0;
+                padding: 5px 0;
                 font-weight: 350; }
           #our-plans .content .content-plans .plan button {
             background-color: #EB9B02;
@@ -871,15 +878,19 @@ body {
     min-height: 100vh;
     background-image: url(../imgs/bg-video.png);
     background-repeat: no-repeat;
-    background-size: 100%;
+    background-size: cover;
+    background-position: bottom;
     padding: 0 100px; }
     #differential .content {
       display: flex;
-      flex-direction: row; }
+      flex-direction: row;
+      justify-content: center;
+      align-items: center; }
       #differential .content > div {
         display: flex;
         flex-direction: column;
-        flex: 1; }
+        flex: 1;
+        justify-content: center; }
         #differential .content > div .content-title {
           padding-top: 110px; }
           #differential .content > div .content-title > h1 {
@@ -902,8 +913,7 @@ body {
         #differential .content > div .content-items {
           display: flex;
           flex-direction: column;
-          justify-content: center;
-          margin-bottom: 90px; }
+          justify-content: center; }
           #differential .content > div .content-items div {
             display: flex;
             align-items: center;
@@ -923,7 +933,9 @@ body {
               color: #FFF;
               padding-left: 30px; }
       #differential .content .content-video {
-        padding-top: 90px; }
+        padding-top: 110px; }
+        #differential .content .content-video iframe {
+          height: 500px; }
       #differential .content .content-image {
         display: none; }
   #get-lead {
@@ -951,8 +963,7 @@ body {
           font-size: 40px;
           font-style: normal;
           font-weight: 500;
-          color: #FFF;
-          margin-top: 80px; }
+          color: #FFF; }
         #get-lead .content > div .content-text > p {
           font-family: "Roboto";
           font-size: 20px;
@@ -966,9 +977,13 @@ body {
         align-items: center;
         flex: 1; }
         #get-lead .content .content-image .desktop {
-          display: block; }
+          display: flex;
+          align-items: center;
+          justify-content: flex-end; }
         #get-lead .content .content-image .mobile {
           display: none; }
+        #get-lead .content .content-image img {
+          width: 80%; }
       #get-lead .content .content-button-lead {
         display: flex;
         flex-direction: row;
@@ -1004,6 +1019,7 @@ body {
         font-weight: 500;
         color: #EB9B02;
         margin-bottom: 80px;
+        margin-top: 80px;
         width: 100%;
         text-align: left; }
       #common-questions .content .content-text > p {
@@ -1049,7 +1065,7 @@ body {
                 width: 15px;
                 margin-left: 18px; }
             #common-questions .content div .content-items .question .answer {
-              width: 95%;
+              width: calc(95% - 60px);
               background: #e4ebfa;
               color: #3E3E3E;
               font-family: "Lato";
@@ -1194,3 +1210,33 @@ body {
     font-weight: 300;
     color: #FFF;
     padding: 20px 0; } }
+
+@media screen and (min-width: 1800px) {
+  #home {
+    width: calc(100% - 20%);
+    padding: 0 10%; }
+  #about {
+    width: calc(100% - 20%);
+    padding: 0 10%; }
+  #our-plans .content .content-title {
+    width: calc(100% - 20%);
+    padding: 0 10%; }
+  #our-plans .content > div:nth-child(2) {
+    width: calc(100% - 20%);
+    padding: 0 10%; }
+  #our-plans .content .content-plans {
+    width: calc(100% - 20%);
+    padding: 30px 10%; }
+  #differential {
+    width: calc(100% - 20%);
+    padding: 0 10%; }
+  #get-lead {
+    width: calc(100% - 20%);
+    padding: 0 10%; }
+  #common-questions {
+    width: calc(100% - 20%);
+    padding: 0 10%;
+    padding-bottom: 60px; }
+  footer {
+    width: calc(100% - 20%);
+    padding: 50px 10%; } }
