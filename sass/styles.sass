@@ -716,6 +716,10 @@ body
         color: #FFF
         padding: 60px 0
 
+        a
+            text-decoration: none
+            color: #FFF
+
 // $normal-screen-min
 @media screen and (min-width: $normal-screen-min)
     #home
@@ -726,7 +730,7 @@ body
         min-height: 100vh
         background-image: url(../imgs/bg-home.png)
         background-repeat: no-repeat
-        background-position: bottom
+        background-position: center
         background-size: 100% 100%
         padding: 0 100px
 
@@ -740,6 +744,9 @@ body
                 flex: 0.3
                 justify-content: flex-start
                 align-items: center
+
+                img
+                    width: 90%
 
             .normal-menu
                 display: block
@@ -1146,6 +1153,7 @@ body
 
             .content-video
                 padding-top: 110px
+                padding-left: 20px
 
                 iframe
                     height: 500px
@@ -1480,6 +1488,10 @@ body
         font-weight: 300
         color: #FFF
         padding: 20px 0
+
+        a
+            text-decoration: none
+            color: #FFF
 
 // $big-screen-min
 @media screen and (min-width: $big-screen-min)
