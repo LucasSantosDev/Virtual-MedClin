@@ -601,7 +601,7 @@ body {
         justify-content: flex-start;
         align-items: center; }
         #home > header .logo img {
-          width: 90%; }
+          width: 50%; }
       #home > header .normal-menu {
         display: block;
         display: flex;
