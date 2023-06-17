@@ -981,99 +981,185 @@ body
                         font-weight: 400
                         color: #FFF
 
-            .content-plans
+            > div
                 display: flex
-                flex-direction: row
-                justify-content: center
+                justify-content: space-between
                 align-items: center
+                flex-direction: row
                 width: 80%
 
-                .plan
+                .content-image
+                    display: flex
+                    justify-content: center
+                    align-items: center
+                    flex: 1
+
+                .content-plans
                     display: flex
                     flex-direction: column
                     justify-content: center
                     align-items: center
-                    width: 80%
-                    margin: 40px 10px
-                    border-radius: 20px
-                    padding-bottom: 20px
-                    -webkit-box-shadow: 0px 0px 49px -16px rgba(0,0,0,0.75)
-                    -moz-box-shadow: 0px 0px 49px -16px rgba(0,0,0,0.75)
-                    box-shadow: 0px 0px 49px -16px rgba(0,0,0,0.75)
-                    background-color: #FFF
+                    flex: 1
 
-                    header
-                        border-radius: 20px 20px 0 0
+                    .select-plan
                         display: flex
-                        flex-direction: column
-                        justify-content: center
-                        align-items: center
-                        background-color: $primary-color
-                        color: #FFF
-                        padding: 20px 0
-                        width: 100%
-                        font-family: $font-text
-                        font-size: 22px
+                        flex-direction: row
+                        width: 90%
+                        margin-top: 20px
 
-                        span
-                            font-weight: lighter
-
-                    > div
-                        display: flex
-                        flex-direction: column
-                        justify-content: center
-                        align-items: center
-                        width: 100%
-                        background-color: #FFF
-
-                        .price
+                        > div:nth-child(1)
                             display: flex
-                            flex-wrap: nowrap
-                            justify-content: center
-                            align-items: center
-                            padding-top: 10px
+                            flex-direction: column
+                            flex: 1
+                            padding-left: 10px
 
-                            sup
-                                font-family: $font-text
-                                color: $normal-text-color
-                                font-size: 20px
-                                padding-top: 10px
-                                float: left
+                            h3
+                                font-family: $font-title
+                                font-size: 23px
+                                font-style: normal
+                                font-weight: 500
+                                color: $secondary-color
+                                margin-bottom: 10px
 
                             span
-                                font-family: $font-title
-                                font-size: 80px
-                                color: $secondary-color
+                                font-family: $font-text
+                                font-size: 15px
+                                color: #6B6B6B
 
-                            sub
-                                font-family: $font-title
-                                font-size: 27px
-                                color: $secondary-color
+                        > div:nth-child(2)
+                            display: flex
+                            flex-direction: column
+                            flex: 1
+                            padding-right: 10px
 
-                        .services
-                            padding: 10px 50px
-                            text-align: center
-                            font-family: $font-text
-                            font-size: 16px
-                            color: #6B6B6B
+                            > span
+                                font-family: $font-text
+                                font-size: 16px
+                                color: #6B6B6B
+                                margin-bottom: 10px
+                                flex: 1
 
-                            hr
-                                display: none
+                            > div
+                                display: flex
+                                flex-direction: row
+                                flex: 1
+                                padding: 4px
+                                border-radius: 8px
+                                background: $primary-color
 
-                            p
-                                text-align: left
-                                padding: 5px 0
-                                font-weight: 350
+                                button
+                                    display: flex
+                                    flex: 1
+                                    align-items: center
+                                    justify-content: center
+                                    border-radius: 8px
+                                    font-size: 15px
+                                    cursor: pointer
 
-                    button
-                        background-color: $secondary-color
-                        color: #FFF
-                        border-width: 0px
-                        border-radius: 10px
-                        padding: 15px 0
-                        font-family: $font-text
-                        font-size: 20px
-                        width: 90%
+                                    &.plan-inactive
+                                        border: none
+                                        background: transparent
+                                        color: $normal-text-color
+
+                                    &.plan-active
+                                        border: none
+                                        background: $secondary-color
+                                        color: #FFF
+
+                    .in-cash, .installments
+                        display: flex
+                        flex-direction: row
+                        justify-content: center
+                        align-items: center
+
+                        &.plans-hide
+                            display: none
+
+                        .plan
+                            display: flex
+                            flex-direction: column
+                            justify-content: center
+                            align-items: center
+                            margin: 25px 10px
+                            border-radius: 20px
+                            padding-bottom: 20px
+                            -webkit-box-shadow: 0px 0px 49px -16px rgba(0,0,0,0.75)
+                            -moz-box-shadow: 0px 0px 49px -16px rgba(0,0,0,0.75)
+                            box-shadow: 0px 0px 49px -16px rgba(0,0,0,0.75)
+                            background-color: #FFF
+
+                            header
+                                border-radius: 20px 20px 0 0
+                                display: flex
+                                flex-direction: column
+                                justify-content: center
+                                align-items: center
+                                background-color: $primary-color
+                                color: #FFF
+                                padding: 30px 0
+                                width: 100%
+                                font-family: $font-text
+                                font-size: 20px
+
+                                span
+                                    font-weight: lighter
+
+                            > div
+                                display: flex
+                                flex-direction: column
+                                justify-content: center
+                                align-items: center
+                                width: 100%
+                                background-color: #FFF
+
+                                .price
+                                    display: flex
+                                    flex-wrap: nowrap
+                                    justify-content: center
+                                    align-items: center
+                                    padding-top: 10px
+
+                                    sup
+                                        font-family: $font-text
+                                        color: $normal-text-color
+                                        font-size: 20px
+                                        padding-top: 10px
+                                        float: left
+
+                                    span
+                                        font-family: $font-title
+                                        font-size: 80px
+                                        color: $secondary-color
+
+                                    sub
+                                        font-family: $font-title
+                                        font-size: 27px
+                                        color: $secondary-color
+
+                                .services
+                                    padding: 10px 50px
+                                    text-align: left
+                                    font-family: $font-text
+                                    font-size: 16px
+                                    color: #6B6B6B
+
+                                    hr
+                                        display: none
+
+                                    p
+                                        text-align: left
+                                        padding: 5px 0
+                                        font-weight: 350
+
+                            button
+                                background-color: $secondary-color
+                                color: #FFF
+                                border-width: 0px
+                                border-radius: 10px
+                                padding: 15px 0
+                                font-family: $font-text
+                                font-size: 20px
+                                width: 90%
 
     #differential
         display: flex

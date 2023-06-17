@@ -793,87 +793,159 @@ body {
             font-style: normal;
             font-weight: 400;
             color: #FFF; }
-      #our-plans .content .content-plans {
+      #our-plans .content > div {
         display: flex;
-        flex-direction: row;
-        justify-content: center;
+        justify-content: space-between;
         align-items: center;
+        flex-direction: row;
         width: 80%; }
-        #our-plans .content .content-plans .plan {
+        #our-plans .content > div .content-image {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          flex: 1; }
+        #our-plans .content > div .content-plans {
           display: flex;
           flex-direction: column;
           justify-content: center;
           align-items: center;
-          width: 80%;
-          margin: 40px 10px;
-          border-radius: 20px;
-          padding-bottom: 20px;
-          -webkit-box-shadow: 0px 0px 49px -16px rgba(0, 0, 0, 0.75);
-          -moz-box-shadow: 0px 0px 49px -16px rgba(0, 0, 0, 0.75);
-          box-shadow: 0px 0px 49px -16px rgba(0, 0, 0, 0.75);
-          background-color: #FFF; }
-          #our-plans .content .content-plans .plan header {
-            border-radius: 20px 20px 0 0;
+          flex: 1; }
+          #our-plans .content > div .content-plans .select-plan {
             display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            background-color: #31B5DA;
-            color: #FFF;
-            padding: 20px 0;
-            width: 100%;
-            font-family: "Roboto";
-            font-size: 22px; }
-            #our-plans .content .content-plans .plan header span {
-              font-weight: lighter; }
-          #our-plans .content .content-plans .plan > div {
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            width: 100%;
-            background-color: #FFF; }
-            #our-plans .content .content-plans .plan > div .price {
+            flex-direction: row;
+            width: 90%;
+            margin-top: 20px; }
+            #our-plans .content > div .content-plans .select-plan > div:nth-child(1) {
               display: flex;
-              flex-wrap: nowrap;
+              flex-direction: column;
+              flex: 1;
+              padding-left: 10px; }
+              #our-plans .content > div .content-plans .select-plan > div:nth-child(1) h3 {
+                font-family: "Lato";
+                font-size: 23px;
+                font-style: normal;
+                font-weight: 500;
+                color: #EB9B02;
+                margin-bottom: 10px; }
+              #our-plans .content > div .content-plans .select-plan > div:nth-child(1) span {
+                font-family: "Roboto";
+                font-size: 15px;
+                color: #6B6B6B; }
+            #our-plans .content > div .content-plans .select-plan > div:nth-child(2) {
+              display: flex;
+              flex-direction: column;
+              flex: 1;
+              padding-right: 10px; }
+              #our-plans .content > div .content-plans .select-plan > div:nth-child(2) > span {
+                font-family: "Roboto";
+                font-size: 16px;
+                color: #6B6B6B;
+                margin-bottom: 10px;
+                flex: 1; }
+              #our-plans .content > div .content-plans .select-plan > div:nth-child(2) > div {
+                display: flex;
+                flex-direction: row;
+                flex: 1;
+                padding: 4px;
+                border-radius: 8px;
+                background: #31B5DA; }
+                #our-plans .content > div .content-plans .select-plan > div:nth-child(2) > div button {
+                  display: flex;
+                  flex: 1;
+                  align-items: center;
+                  justify-content: center;
+                  border-radius: 8px;
+                  font-size: 15px;
+                  cursor: pointer; }
+                  #our-plans .content > div .content-plans .select-plan > div:nth-child(2) > div button.plan-inactive {
+                    border: none;
+                    background: transparent;
+                    color: #3E3E3E; }
+                  #our-plans .content > div .content-plans .select-plan > div:nth-child(2) > div button.plan-active {
+                    border: none;
+                    background: #EB9B02;
+                    color: #FFF; }
+          #our-plans .content > div .content-plans .in-cash, #our-plans .content > div .content-plans .installments {
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: center; }
+            #our-plans .content > div .content-plans .in-cash.plans-hide, #our-plans .content > div .content-plans .installments.plans-hide {
+              display: none; }
+            #our-plans .content > div .content-plans .in-cash .plan, #our-plans .content > div .content-plans .installments .plan {
+              display: flex;
+              flex-direction: column;
               justify-content: center;
               align-items: center;
-              padding-top: 10px; }
-              #our-plans .content .content-plans .plan > div .price sup {
+              margin: 25px 10px;
+              border-radius: 20px;
+              padding-bottom: 20px;
+              -webkit-box-shadow: 0px 0px 49px -16px rgba(0, 0, 0, 0.75);
+              -moz-box-shadow: 0px 0px 49px -16px rgba(0, 0, 0, 0.75);
+              box-shadow: 0px 0px 49px -16px rgba(0, 0, 0, 0.75);
+              background-color: #FFF; }
+              #our-plans .content > div .content-plans .in-cash .plan header, #our-plans .content > div .content-plans .installments .plan header {
+                border-radius: 20px 20px 0 0;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                background-color: #31B5DA;
+                color: #FFF;
+                padding: 30px 0;
+                width: 100%;
                 font-family: "Roboto";
-                color: #3E3E3E;
+                font-size: 20px; }
+                #our-plans .content > div .content-plans .in-cash .plan header span, #our-plans .content > div .content-plans .installments .plan header span {
+                  font-weight: lighter; }
+              #our-plans .content > div .content-plans .in-cash .plan > div, #our-plans .content > div .content-plans .installments .plan > div {
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                width: 100%;
+                background-color: #FFF; }
+                #our-plans .content > div .content-plans .in-cash .plan > div .price, #our-plans .content > div .content-plans .installments .plan > div .price {
+                  display: flex;
+                  flex-wrap: nowrap;
+                  justify-content: center;
+                  align-items: center;
+                  padding-top: 10px; }
+                  #our-plans .content > div .content-plans .in-cash .plan > div .price sup, #our-plans .content > div .content-plans .installments .plan > div .price sup {
+                    font-family: "Roboto";
+                    color: #3E3E3E;
+                    font-size: 20px;
+                    padding-top: 10px;
+                    float: left; }
+                  #our-plans .content > div .content-plans .in-cash .plan > div .price span, #our-plans .content > div .content-plans .installments .plan > div .price span {
+                    font-family: "Lato";
+                    font-size: 80px;
+                    color: #EB9B02; }
+                  #our-plans .content > div .content-plans .in-cash .plan > div .price sub, #our-plans .content > div .content-plans .installments .plan > div .price sub {
+                    font-family: "Lato";
+                    font-size: 27px;
+                    color: #EB9B02; }
+                #our-plans .content > div .content-plans .in-cash .plan > div .services, #our-plans .content > div .content-plans .installments .plan > div .services {
+                  padding: 10px 50px;
+                  text-align: left;
+                  font-family: "Roboto";
+                  font-size: 16px;
+                  color: #6B6B6B; }
+                  #our-plans .content > div .content-plans .in-cash .plan > div .services hr, #our-plans .content > div .content-plans .installments .plan > div .services hr {
+                    display: none; }
+                  #our-plans .content > div .content-plans .in-cash .plan > div .services p, #our-plans .content > div .content-plans .installments .plan > div .services p {
+                    text-align: left;
+                    padding: 5px 0;
+                    font-weight: 350; }
+              #our-plans .content > div .content-plans .in-cash .plan button, #our-plans .content > div .content-plans .installments .plan button {
+                background-color: #EB9B02;
+                color: #FFF;
+                border-width: 0px;
+                border-radius: 10px;
+                padding: 15px 0;
+                font-family: "Roboto";
                 font-size: 20px;
-                padding-top: 10px;
-                float: left; }
-              #our-plans .content .content-plans .plan > div .price span {
-                font-family: "Lato";
-                font-size: 80px;
-                color: #EB9B02; }
-              #our-plans .content .content-plans .plan > div .price sub {
-                font-family: "Lato";
-                font-size: 27px;
-                color: #EB9B02; }
-            #our-plans .content .content-plans .plan > div .services {
-              padding: 10px 50px;
-              text-align: center;
-              font-family: "Roboto";
-              font-size: 16px;
-              color: #6B6B6B; }
-              #our-plans .content .content-plans .plan > div .services hr {
-                display: none; }
-              #our-plans .content .content-plans .plan > div .services p {
-                text-align: left;
-                padding: 5px 0;
-                font-weight: 350; }
-          #our-plans .content .content-plans .plan button {
-            background-color: #EB9B02;
-            color: #FFF;
-            border-width: 0px;
-            border-radius: 10px;
-            padding: 15px 0;
-            font-family: "Roboto";
-            font-size: 20px;
-            width: 90%; }
+                width: 90%; }
   #differential {
     display: flex;
     flex-direction: column;

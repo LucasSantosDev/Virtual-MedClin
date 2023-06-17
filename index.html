@@ -9,6 +9,8 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
     <script>
         $(document).ready(function () {
+            // QUESTION > ANSWERS
+
             $('.answer').slideUp('fast')
 
             $('.question-title').click(function () {
@@ -17,6 +19,8 @@
 
                 answerElement.slideToggle('slow')
             });
+
+            // SCROLL PAGE
 
             $('.go-to-plans').click(function () {
                 var content = document.querySelector('#our-plans .content-plans')
@@ -111,6 +115,19 @@
                     contador = 1
                 }
             }, 5000)
+
+            // OUR-PLANS
+
+            $('.select-plan div div button').click(function (e) {
+                if (e.target.className === 'plan-inactive') {
+                    $('.plan-active').removeClass('plan-active').addClass('plan-inactive')
+                    e.target.classList.add('plan-active')
+                    e.target.classList.remove('plan-inactive')
+
+                    $(`.${e.target.dataset.show}`).removeClass('plans-hide')
+                    $(`.${e.target.dataset.hide}`).addClass('plans-hide')
+                }
+            })
         })
 
         function openURL(url, newTab) {
@@ -226,130 +243,154 @@
                     </p>
                 </div>
             </div>
-            <div class="content-plans">
-                <div class="plan">
-                    <header>
-                        <h3>ANUAL</h3>
-                        <span>Parcelado em 12x de</span>
-                    </header>
-                    <div>
-                        <div class="price">
-                            <sup>R$</sup>
-                            <span>31,</span>
-                            <sub>90</sub>
-                        </div>
-                        <div class="services">
-                            <p>Consultas ilimitadas</p>
-                            <hr />
-                            <p>Atendimento 24h</p>
-                            <hr />
-                            <p>Sem carências</p>
-                            <hr />
-                            <p>Receituários</p>
-                            <hr />
-                            <p>Pedidos de Exames</p>
-                            <hr />
-                            <p>Atestados</p>
-                            <hr />
-                            <p>Encaminhamentos Médicos</p>
-                        </div>
-                    </div>
-                    <button
-                        onclick="openURL('https://app.galaxpay.com.br/landingpage9823354/principal/comprar/anual-parcelado-em-ate-6x/5')"
-                        action="button">Contratar Plano</button>
+            <div>
+                <div class="content-image">
+                    <img src="./imgs/our-plans-image.png" alt="">
                 </div>
-                <div class="plan">
-                    <header>
-                        <h3>SEMESTRAL</h3>
-                        <span>Parcelado em 6x de</span>
-                    </header>
-                    <div>
-                        <div class="price">
-                            <sup>R$</sup>
-                            <span>34,</span>
-                            <sub>90</sub>
+                <div class="content-plans">
+                    <div class="select-plan">
+                        <div>
+                            <h3>Valores</h3>
+                            <span>Preços que cabem no seu bolso para <br />atender você e sua família</span>
                         </div>
-                        <div class="services">
-                            <p>Consultas ilimitadas</p>
-                            <hr />
-                            <p>Atendimento 24h</p>
-                            <hr />
-                            <p>Sem carências</p>
-                            <hr />
-                            <p>Receituários</p>
-                            <hr />
-                            <p>Pedidos de Exames</p>
-                            <hr />
-                            <p>Atestados</p>
-                            <hr />
-                            <p>Encaminhamentos Médicos</p>
+                        <div>
+                            <span>Selecione seu plano:</span>
+                            <div>
+                                <button action="button" data-hide="in-cash" data-show="installments"
+                                    class="plan-inactive">valor parcelado</button>
+                                <button action="button" data-hide="installments" data-show="in-cash"
+                                    class="plan-active">valor à vista</button>
+                            </div>
                         </div>
                     </div>
-                    <button
-                        onclick="openURL('https://app.galaxpay.com.br/landingpage9823354/principal/comprar/semestral-parcelado-em-ate-6x/4')"
-                        action="button">Contratar Plano</button>
-                </div>
-                <div class="plan">
-                    <header>
-                        <h3>ANUAL</h3>
-                        <span>À vista - 2 Meses grátis</span>
-                    </header>
-                    <div>
-                        <div class="price">
-                            <sup>R$</sup>
-                            <span>322,</span>
-                            <sub>80</sub>
+                    <div class="in-cash">
+                        <div class="plan">
+                            <header>
+                                <h3>ANUAL</h3>
+                                <span>À vista - 2 Meses grátis</span>
+                            </header>
+                            <div>
+                                <div class="price">
+                                    <sup>R$</sup>
+                                    <span>322,</span>
+                                    <sub>80</sub>
+                                </div>
+                                <div class="services">
+                                    <p>Consultas ilimitadas</p>
+                                    <hr />
+                                    <p>Atendimento 24h</p>
+                                    <hr />
+                                    <p>Sem carências</p>
+                                    <hr />
+                                    <p>Receituários</p>
+                                    <hr />
+                                    <p>Pedidos de Exames</p>
+                                    <hr />
+                                    <p>Atestados</p>
+                                    <hr />
+                                    <p>Encaminhamentos Médicos</p>
+                                </div>
+                            </div>
+                            <button
+                                onclick="openURL('https://app.galaxpay.com.br/landingpage9823354/principal/comprar/anual-a-vista/3')"
+                                action="button">Contratar Plano</button>
                         </div>
-                        <div class="services">
-                            <p>Consultas ilimitadas</p>
-                            <hr />
-                            <p>Atendimento 24h</p>
-                            <hr />
-                            <p>Sem carências</p>
-                            <hr />
-                            <p>Receituários</p>
-                            <hr />
-                            <p>Pedidos de Exames</p>
-                            <hr />
-                            <p>Atestados</p>
-                            <hr />
-                            <p>Encaminhamentos Médicos</p>
+                        <div class="plan">
+                            <header>
+                                <h3>SEMESTRAL</h3>
+                                <span>À Vista - 1 Mês grátis</span>
+                            </header>
+                            <div>
+                                <div class="price">
+                                    <sup>R$</sup>
+                                    <span>174,</span>
+                                    <sub>00</sub>
+                                </div>
+                                <div class="services">
+                                    <p>Consultas ilimitadas</p>
+                                    <hr />
+                                    <p>Atendimento 24h</p>
+                                    <hr />
+                                    <p>Sem carências</p>
+                                    <hr />
+                                    <p>Receituários</p>
+                                    <hr />
+                                    <p>Pedidos de Exames</p>
+                                    <hr />
+                                    <p>Atestados</p>
+                                    <hr />
+                                    <p>Encaminhamentos Médicos</p>
+                                </div>
+                            </div>
+                            <button
+                                onclick="openURL('https://app.galaxpay.com.br/landingpage9823354/principal/comprar/semestral-a-vista/2')"
+                                action="button">Contratar Plano</button>
                         </div>
                     </div>
-                    <button
-                        onclick="openURL('https://app.galaxpay.com.br/landingpage9823354/principal/comprar/anual-a-vista/3')"
-                        action="button">Contratar Plano</button>
-                </div>
-                <div class="plan">
-                    <header>
-                        <h3>SEMESTRAL</h3>
-                        <span>À Vista - 1 Mês grátis</span>
-                    </header>
-                    <div>
-                        <div class="price">
-                            <sup>R$</sup>
-                            <span>174,</span>
-                            <sub>00</sub>
+                    <div class="installments plans-hide">
+                        <div class="plan">
+                            <header>
+                                <h3>ANUAL</h3>
+                                <span>Parcelado em 12x de</span>
+                            </header>
+                            <div>
+                                <div class="price">
+                                    <sup>R$</sup>
+                                    <span>31,</span>
+                                    <sub>90</sub>
+                                </div>
+                                <div class="services">
+                                    <p>Consultas ilimitadas</p>
+                                    <hr />
+                                    <p>Atendimento 24h</p>
+                                    <hr />
+                                    <p>Sem carências</p>
+                                    <hr />
+                                    <p>Receituários</p>
+                                    <hr />
+                                    <p>Pedidos de Exames</p>
+                                    <hr />
+                                    <p>Atestados</p>
+                                    <hr />
+                                    <p>Encaminhamentos Médicos</p>
+                                </div>
+                            </div>
+                            <button
+                                onclick="openURL('https://app.galaxpay.com.br/landingpage9823354/principal/comprar/anual-parcelado-em-ate-6x/5')"
+                                action="button">Contratar Plano</button>
                         </div>
-                        <div class="services">
-                            <p>Consultas ilimitadas</p>
-                            <hr />
-                            <p>Atendimento 24h</p>
-                            <hr />
-                            <p>Sem carências</p>
-                            <hr />
-                            <p>Receituários</p>
-                            <hr />
-                            <p>Pedidos de Exames</p>
-                            <hr />
-                            <p>Atestados</p>
-                            <hr />
-                            <p>Encaminhamentos Médicos</p>
+                        <div class="plan">
+                            <header>
+                                <h3>SEMESTRAL</h3>
+                                <span>Parcelado em 6x de</span>
+                            </header>
+                            <div>
+                                <div class="price">
+                                    <sup>R$</sup>
+                                    <span>34,</span>
+                                    <sub>90</sub>
+                                </div>
+                                <div class="services">
+                                    <p>Consultas ilimitadas</p>
+                                    <hr />
+                                    <p>Atendimento 24h</p>
+                                    <hr />
+                                    <p>Sem carências</p>
+                                    <hr />
+                                    <p>Receituários</p>
+                                    <hr />
+                                    <p>Pedidos de Exames</p>
+                                    <hr />
+                                    <p>Atestados</p>
+                                    <hr />
+                                    <p>Encaminhamentos Médicos</p>
+                                </div>
+                            </div>
+                            <button
+                                onclick="openURL('https://app.galaxpay.com.br/landingpage9823354/principal/comprar/semestral-parcelado-em-ate-6x/4')"
+                                action="button">Contratar Plano</button>
                         </div>
                     </div>
-                    <button
-                        onclick="openURL('https://app.galaxpay.com.br/landingpage9823354/principal/comprar/semestral-a-vista/2')"
-                        action="button">Contratar Plano</button>
                 </div>
             </div>
         </div>
