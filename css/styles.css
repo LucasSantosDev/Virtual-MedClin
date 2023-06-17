@@ -753,10 +753,12 @@ body {
       #our-plans .content .content-title {
         display: flex;
         flex-direction: row;
-        justify-content: space-between;
+        justify-content: space-around;
         align-items: center;
         height: 200px;
-        background-color: #EB9B02;
+        background-image: url(../imgs/our-plans-header-bg.png);
+        background-repeat: no-repeat;
+        background-size: 100%;
         width: 100%; }
         #our-plans .content .content-title > h1 {
           font-family: "Lato";
@@ -764,35 +766,30 @@ body {
           line-height: 80px;
           font-style: normal;
           font-weight: 500;
-          color: #FFF;
-          margin-left: 100px; }
-        #our-plans .content .content-title > img {
-          width: 50px; }
-      #our-plans .content > div:nth-child(2) {
-        display: flex;
-        justify-content: flex-end;
-        align-items: center;
-        width: 90%;
-        margin-right: 30px; }
-        #our-plans .content > div:nth-child(2) .content-explanation {
+          color: #FFF; }
+        #our-plans .content .content-title .content-explanation {
           display: flex;
-          flex-direction: column;
+          flex-direction: row;
           justify-content: center;
           align-items: center;
           background: #31B5DA;
-          width: 500px;
-          margin-top: -100px;
-          padding: 30px 0px;
+          max-width: 600px;
+          padding: 15px 30px;
           border-radius: 20px; }
-          #our-plans .content > div:nth-child(2) .content-explanation > img {
-            width: 50px;
-            margin-bottom: 30px; }
-          #our-plans .content > div:nth-child(2) .content-explanation > p {
+          #our-plans .content .content-title .content-explanation > div {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex: 0.28; }
+            #our-plans .content .content-title .content-explanation > div img {
+              width: 90px; }
+          #our-plans .content .content-title .content-explanation > p {
+            display: flex;
+            flex: 1;
             font-family: "Roboto";
-            padding: 0 40px;
             font-size: 15px;
             line-height: 25px;
-            text-align: center;
+            text-align: justify;
             font-style: normal;
             font-weight: 400;
             color: #FFF; }
