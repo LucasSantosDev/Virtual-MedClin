@@ -616,15 +616,17 @@ body {
           justify-content: center;
           align-items: center; }
           #home > header .normal-menu ul li {
-            padding: 20px; }
+            padding: 13px 20px; }
             #home > header .normal-menu ul li a {
               text-decoration: none;
               font-size: 18px;
               font-family: "Roboto";
               color: #fff; }
           #home > header .normal-menu ul li:nth-child(5) {
-            border: 2px solid #FFF;
+            background: #f6f6f6;
             border-radius: 10px; }
+            #home > header .normal-menu ul li:nth-child(5) a {
+              color: #31B5DA; }
       #home > header .button-menu {
         display: none; }
     #home .content {
@@ -755,10 +757,11 @@ body {
         flex-direction: row;
         justify-content: space-around;
         align-items: center;
-        height: 200px;
+        height: 200px auto;
+        padding: 15px 0;
         background-image: url(../imgs/our-plans-header-bg.png);
         background-repeat: no-repeat;
-        background-size: 100%;
+        background-size: 100% 100%;
         width: 100%; }
         #our-plans .content .content-title > h1 {
           font-family: "Lato";
@@ -860,7 +863,10 @@ body {
                   #our-plans .content > div .content-plans .select-plan > div:nth-child(2) > div button.plan-inactive {
                     border: none;
                     background: transparent;
-                    color: #3E3E3E; }
+                    color: #3E3E3E;
+                    -webkit-box-shadow: 0px 0px 13px -9px rgba(0, 0, 0, 0.75);
+                    -moz-box-shadow: 0px 0px 13px -9px rgba(0, 0, 0, 0.75);
+                    box-shadow: 0px 0px 13px -9px rgba(0, 0, 0, 0.75); }
                   #our-plans .content > div .content-plans .select-plan > div:nth-child(2) > div button.plan-active {
                     border: none;
                     background: #EB9B02;
@@ -983,7 +989,7 @@ body {
           font-size: 27px;
           line-height: 40px;
           color: #FFF;
-          margin-bottom: 79px; }
+          margin-bottom: 50px; }
           #differential .content > div .content-text > p label {
             color: #FDDB57; }
         #differential .content > div .content-items {

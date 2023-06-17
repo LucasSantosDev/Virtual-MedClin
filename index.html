@@ -37,6 +37,10 @@
                 scrollPage(document.querySelector('#common-questions'))
             });
 
+            $('.comments-nav').click(function () {
+                scrollPage(document.querySelector('#comments'))
+            });
+
             $('.about-nav').click(function () {
                 scrollPage(document.querySelector('#about'))
             });
@@ -150,7 +154,7 @@
                 <ul>
                     <li><a class="about-nav" href="#">Sobre</a></li>
                     <li><a class="differential-nav" href="#">Diferências</a></li>
-                    <li><a class="-nav" href="#">Depoimentos</a></li>
+                    <li><a class="comments-nav" href="#">Depoimentos</a></li>
                     <li><a class="common-questions-nav" href="#">Perguntas Frequentes</a></li>
                     <li><a href="https://consultorio.virtualmedclin.com.br/login">Fazer Login</a></li>
                 </ul>
@@ -257,9 +261,9 @@
                             <span>Selecione seu plano:</span>
                             <div>
                                 <button action="button" data-hide="in-cash" data-show="installments"
-                                    class="plan-inactive">valor parcelado</button>
+                                    class="plan-inactive">Valor Parcelado</button>
                                 <button action="button" data-hide="installments" data-show="in-cash"
-                                    class="plan-active">valor à vista</button>
+                                    class="plan-active">Valor à Vista</button>
                             </div>
                         </div>
                     </div>
