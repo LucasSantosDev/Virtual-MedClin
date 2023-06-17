@@ -5,6 +5,7 @@
     <title>Virtual Med - Clin</title>
     <link rel="stylesheet" type="text/css" href="css/styles.css">
     <link rel="shortcut icon" href="imgs/favicon.png" type="image/x-icon">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
     <script>
         $(document).ready(function () {
@@ -48,6 +49,68 @@
                     });
                 }, 300)
             }
+
+            // SLIDE COMMENTS
+
+            let contador = 1
+            const itemsDotControll = [1, 2, 3, 4]
+
+            $('.dot-controll > div').click(function (e) {
+                itemsDotControll.forEach((item) => {
+                    contador = e.target.dataset.comment
+                    if (String(e.target.dataset.comment) === String(item)) {
+                        $(`.dot-controll > .dot-comment-${item}`)
+                            .addClass('active')
+                            .removeClass('inactive')
+                        $(`.comment-${item}`)
+                            .addClass('comment-show')
+                            .addClass('animate__slideInLeft')
+                            .removeClass('animate__slideOutRight')
+                            .removeClass('comment-hide')
+                    } else {
+                        $(`.dot-controll > .dot-comment-${item}`)
+                            .addClass('inactive')
+                            .removeClass('active')
+                        $(`.comment-${item}`)
+                            .addClass('comment-hide')
+                            .addClass('animate__slideOutRight')
+                            .removeClass('animate__slideInLeft')
+                            .removeClass('comment-show')
+                    }
+                })
+            })
+
+            setInterval(() => {
+                const currentIsInactive = $(`.dot-controll > .dot-comment-${contador}`).hasClass('inactive')
+
+                if (currentIsInactive) {
+                    itemsDotControll.forEach((item) => {
+                        $(`.dot-controll > .dot-comment-${item}`)
+                            .addClass('inactive')
+                            .removeClass('active')
+                        $(`.comment-${item}`)
+                            .addClass('comment-hide')
+                            .addClass('animate__slideOutRight')
+                            .removeClass('animate__slideInLeft')
+                            .removeClass('comment-show')
+                    })
+
+                    $(`.dot-controll > .dot-comment-${contador}`)
+                        .addClass('active')
+                        .removeClass('inactive')
+                    $(`.comment-${contador}`)
+                        .addClass('comment-show')
+                        .addClass('animate__slideInLeft')
+                        .removeClass('animate__slideOutRight')
+                        .removeClass('comment-hide')
+                }
+
+                contador++
+
+                if (contador === 5) {
+                    contador = 1
+                }
+            }, 5000)
         })
 
         function openURL(url, newTab) {
@@ -332,6 +395,273 @@
             </div>
         </div>
     </div>
+    <div id="comments">
+        <div class="content">
+            <div class="content-title">
+                <h1>
+                    O que nossos clientes <br />falam sobre nós.
+                </h1>
+            </div>
+            <div class="content-comments">
+                <div class="comment">
+                    <div class="comment-1 comment-show animate__animated">
+                        <div>
+                            <img src="./imgs/about-item-2.png" alt="Nome do cliente">
+                            <div class="starts">
+                                <img src="./imgs/star-icon.png" alt="">
+                                <img src="./imgs/star-icon.png" alt="">
+                                <img src="./imgs/star-icon.png" alt="">
+                                <img src="./imgs/star-icon.png" alt="">
+                                <img src="./imgs/star-icon.png" alt="">
+                            </div>
+                            <span>Claro Gimicroffoni</span>
+                            <p>
+                                Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum
+                                has
+                                been the industry's standard dummy text ever since the 1500s, when an unknown printer
+                                took a
+                                galley of type and scrambled it to make a type specimen book. It has survived not only
+                                five
+                                centuries
+                            </p>
+                        </div>
+                        <div>
+                            <img src="./imgs/about-item-2.png" alt="Nome do cliente">
+                            <div class="starts">
+                                <img src="./imgs/star-icon.png" alt="">
+                                <img src="./imgs/star-icon.png" alt="">
+                                <img src="./imgs/star-icon.png" alt="">
+                                <img src="./imgs/star-icon.png" alt="">
+                                <img src="./imgs/star-icon.png" alt="">
+                            </div>
+                            <span>Claro Gimicroffoni</span>
+                            <p>
+                                Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum
+                                has
+                                been the industry's standard dummy text ever since the 1500s, when an unknown printer
+                                took a
+                                galley of type and scrambled it to make a type specimen book. It has survived not only
+                                five
+                                centuries
+                            </p>
+                        </div>
+                        <div>
+                            <img src="./imgs/about-item-2.png" alt="Nome do cliente">
+                            <div class="starts">
+                                <img src="./imgs/star-icon.png" alt="">
+                                <img src="./imgs/star-icon.png" alt="">
+                                <img src="./imgs/star-icon.png" alt="">
+                                <img src="./imgs/star-icon.png" alt="">
+                                <img src="./imgs/star-icon.png" alt="">
+                            </div>
+                            <span>Claro Gimicroffoni</span>
+                            <p>
+                                Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum
+                                has
+                                been the industry's standard dummy text ever since the 1500s, when an unknown printer
+                                took a
+                                galley of type and scrambled it to make a type specimen book. It has survived not only
+                                five
+                                centuries
+                            </p>
+                        </div>
+                    </div>
+                    <div class="comment-2 comment-hide animate__animated">
+                        <div>
+                            <img src="./imgs/about-item-1.png" alt="Nome do cliente">
+                            <div class="starts">
+                                <img src="./imgs/star-icon.png" alt="">
+                                <img src="./imgs/star-icon.png" alt="">
+                                <img src="./imgs/star-icon.png" alt="">
+                                <img src="./imgs/star-icon.png" alt="">
+                                <img src="./imgs/star-icon.png" alt="">
+                            </div>
+                            <span>Claro Gimicroffoni</span>
+                            <p>
+                                Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum
+                                has
+                                been the industry's standard dummy text ever since the 1500s, when an unknown printer
+                                took a
+                                galley of type and scrambled it to make a type specimen book. It has survived not only
+                                five
+                                centuries
+                            </p>
+                        </div>
+                        <div>
+                            <img src="./imgs/about-item-1.png" alt="Nome do cliente">
+                            <div class="starts">
+                                <img src="./imgs/star-icon.png" alt="">
+                                <img src="./imgs/star-icon.png" alt="">
+                                <img src="./imgs/star-icon.png" alt="">
+                                <img src="./imgs/star-icon.png" alt="">
+                                <img src="./imgs/star-icon.png" alt="">
+                            </div>
+                            <span>Claro Gimicroffoni</span>
+                            <p>
+                                Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum
+                                has
+                                been the industry's standard dummy text ever since the 1500s, when an unknown printer
+                                took a
+                                galley of type and scrambled it to make a type specimen book. It has survived not only
+                                five
+                                centuries
+                            </p>
+                        </div>
+                        <div>
+                            <img src="./imgs/about-item-1.png" alt="Nome do cliente">
+                            <div class="starts">
+                                <img src="./imgs/star-icon.png" alt="">
+                                <img src="./imgs/star-icon.png" alt="">
+                                <img src="./imgs/star-icon.png" alt="">
+                                <img src="./imgs/star-icon.png" alt="">
+                                <img src="./imgs/star-icon.png" alt="">
+                            </div>
+                            <span>Claro Gimicroffoni</span>
+                            <p>
+                                Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum
+                                has
+                                been the industry's standard dummy text ever since the 1500s, when an unknown printer
+                                took a
+                                galley of type and scrambled it to make a type specimen book. It has survived not only
+                                five
+                                centuries
+                            </p>
+                        </div>
+                    </div>
+                    <div class="comment-3 comment-hide animate__animated">
+                        <div>
+                            <img src="./imgs/about-item-3.png" alt="Nome do cliente">
+                            <div class="starts">
+                                <img src="./imgs/star-icon.png" alt="">
+                                <img src="./imgs/star-icon.png" alt="">
+                                <img src="./imgs/star-icon.png" alt="">
+                                <img src="./imgs/star-icon.png" alt="">
+                                <img src="./imgs/star-icon.png" alt="">
+                            </div>
+                            <span>Claro Gimicroffoni</span>
+                            <p>
+                                Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum
+                                has
+                                been the industry's standard dummy text ever since the 1500s, when an unknown printer
+                                took a
+                                galley of type and scrambled it to make a type specimen book. It has survived not only
+                                five
+                                centuries
+                            </p>
+                        </div>
+                        <div>
+                            <img src="./imgs/about-item-3.png" alt="Nome do cliente">
+                            <div class="starts">
+                                <img src="./imgs/star-icon.png" alt="">
+                                <img src="./imgs/star-icon.png" alt="">
+                                <img src="./imgs/star-icon.png" alt="">
+                                <img src="./imgs/star-icon.png" alt="">
+                                <img src="./imgs/star-icon.png" alt="">
+                            </div>
+                            <span>Claro Gimicroffoni</span>
+                            <p>
+                                Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum
+                                has
+                                been the industry's standard dummy text ever since the 1500s, when an unknown printer
+                                took a
+                                galley of type and scrambled it to make a type specimen book. It has survived not only
+                                five
+                                centuries
+                            </p>
+                        </div>
+                        <div>
+                            <img src="./imgs/about-item-3.png" alt="Nome do cliente">
+                            <div class="starts">
+                                <img src="./imgs/star-icon.png" alt="">
+                                <img src="./imgs/star-icon.png" alt="">
+                                <img src="./imgs/star-icon.png" alt="">
+                                <img src="./imgs/star-icon.png" alt="">
+                                <img src="./imgs/star-icon.png" alt="">
+                            </div>
+                            <span>Claro Gimicroffoni</span>
+                            <p>
+                                Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum
+                                has
+                                been the industry's standard dummy text ever since the 1500s, when an unknown printer
+                                took a
+                                galley of type and scrambled it to make a type specimen book. It has survived not only
+                                five
+                                centuries
+                            </p>
+                        </div>
+                    </div>
+                    <div class="comment-4 comment-hide animate__animated">
+                        <div>
+                            <img src="./imgs/about-item-4.png" alt="Nome do cliente">
+                            <div class="starts">
+                                <img src="./imgs/star-icon.png" alt="">
+                                <img src="./imgs/star-icon.png" alt="">
+                                <img src="./imgs/star-icon.png" alt="">
+                                <img src="./imgs/star-icon.png" alt="">
+                                <img src="./imgs/star-icon.png" alt="">
+                            </div>
+                            <span>Claro Gimicroffoni</span>
+                            <p>
+                                Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum
+                                has
+                                been the industry's standard dummy text ever since the 1500s, when an unknown printer
+                                took a
+                                galley of type and scrambled it to make a type specimen book. It has survived not only
+                                five
+                                centuries
+                            </p>
+                        </div>
+                        <div>
+                            <img src="./imgs/about-item-4.png" alt="Nome do cliente">
+                            <div class="starts">
+                                <img src="./imgs/star-icon.png" alt="">
+                                <img src="./imgs/star-icon.png" alt="">
+                                <img src="./imgs/star-icon.png" alt="">
+                                <img src="./imgs/star-icon.png" alt="">
+                                <img src="./imgs/star-icon.png" alt="">
+                            </div>
+                            <span>Claro Gimicroffoni</span>
+                            <p>
+                                Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum
+                                has
+                                been the industry's standard dummy text ever since the 1500s, when an unknown printer
+                                took a
+                                galley of type and scrambled it to make a type specimen book. It has survived not only
+                                five
+                                centuries
+                            </p>
+                        </div>
+                        <div>
+                            <img src="./imgs/about-item-4.png" alt="Nome do cliente">
+                            <div class="starts">
+                                <img src="./imgs/star-icon.png" alt="">
+                                <img src="./imgs/star-icon.png" alt="">
+                                <img src="./imgs/star-icon.png" alt="">
+                                <img src="./imgs/star-icon.png" alt="">
+                                <img src="./imgs/star-icon.png" alt="">
+                            </div>
+                            <span>Claro Gimicroffoni</span>
+                            <p>
+                                Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum
+                                has
+                                been the industry's standard dummy text ever since the 1500s, when an unknown printer
+                                took a
+                                galley of type and scrambled it to make a type specimen book. It has survived not only
+                                five
+                                centuries
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="dot-controll">
+                    <div data-comment="4" class="dot-comment-4 inactive"></div>
+                    <div data-comment="3" class="dot-comment-3 inactive"></div>
+                    <div data-comment="2" class="dot-comment-2 inactive"></div>
+                    <div data-comment="1" class="dot-comment-1 active"></div>
+                </div>
+            </div>
+        </div>
+    </div>
     <div id="get-lead">
         <div class="content">
             <div>
@@ -494,7 +824,8 @@
     </footer>
     <div class="copyright">
         <p>Um produto do <strong><a href="https://grupoivory.com.br/" target="_blank">GRUPO IVY</a></strong> |
-            <strong>2023</strong></p>
+            <strong>2023</strong>
+        </p>
     </div>
 </body>
 

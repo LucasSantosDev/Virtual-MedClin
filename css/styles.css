@@ -335,6 +335,8 @@ body {
       padding: 0 0 130px 0; }
       #differential .content .content-image img {
         width: 1000px; }
+  #comments {
+    display: none; }
   #get-lead {
     display: flex;
     flex-direction: column;
@@ -944,6 +946,94 @@ body {
           height: 500px; }
       #differential .content .content-image {
         display: none; }
+  #comments {
+    display: flex;
+    flex-direction: row;
+    flex: 1;
+    height: auto;
+    min-height: 100vh;
+    background-image: url(../imgs/bg-about.png);
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    padding: 0 100px; }
+    #comments .content {
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start;
+      align-items: center; }
+      #comments .content .content-title {
+        display: flex;
+        justify-content: flex-start;
+        align-items: flex-start;
+        width: 100%;
+        padding: 90px 0; }
+        #comments .content .content-title > h1 {
+          font-family: "Lato";
+          font-size: 40px;
+          font-style: normal;
+          font-weight: 500;
+          color: #EB9B02; }
+      #comments .content .content-comments {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        margin-bottom: 60px; }
+        #comments .content .content-comments .comment .comment-hide {
+          display: none; }
+        #comments .content .content-comments .comment .comment-show {
+          display: flex;
+          flex-direction: row;
+          align-items: center;
+          justify-items: center;
+          flex: 1;
+          margin-bottom: 30px; }
+          #comments .content .content-comments .comment .comment-show > div {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-items: center;
+            border: 1px solid #ededed;
+            padding: 30px;
+            margin-left: 15px;
+            margin-right: 15px;
+            border-radius: 15px;
+            background-color: #FFF;
+            -webkit-box-shadow: 0px 12px 18px -10px rgba(0, 0, 0, 0.75);
+            -moz-box-shadow: 0px 12px 18px -10px rgba(0, 0, 0, 0.75);
+            box-shadow: 0px 12px 18px -10px rgba(0, 0, 0, 0.75); }
+            #comments .content .content-comments .comment .comment-show > div img {
+              width: 90px;
+              margin-bottom: 20px; }
+            #comments .content .content-comments .comment .comment-show > div .starts {
+              display: flex;
+              flex-direction: row;
+              justify-items: center;
+              align-items: center; }
+              #comments .content .content-comments .comment .comment-show > div .starts img {
+                width: 30px; }
+            #comments .content .content-comments .comment .comment-show > div span {
+              font-family: "Roboto";
+              font-size: 20px;
+              color: #EB9B02;
+              margin-bottom: 20px; }
+            #comments .content .content-comments .comment .comment-show > div p {
+              font-family: "Roboto";
+              font-size: 18px;
+              line-height: 25px;
+              color: #3E3E3E;
+              text-align: center; }
+        #comments .content .content-comments .dot-controll {
+          display: flex;
+          flex-direction: row-reverse; }
+          #comments .content .content-comments .dot-controll div {
+            width: 10px;
+            height: 10px;
+            border-radius: 50%;
+            margin: 0 10px; }
+            #comments .content .content-comments .dot-controll div.active {
+              background: #EB9B02; }
+            #comments .content .content-comments .dot-controll div.inactive {
+              background: #ccc; }
   #get-lead {
     display: flex;
     flex-direction: column;
