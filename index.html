@@ -3,9 +3,10 @@
 
 <head>
     <title>Pronto Atendimento 24 Horas - Planos de Saúde</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
     <meta name="description"
         content="Encontre planos de pronto atendimento 24 horas para sua saúde. Atendimento rápido e eficiente em casos de emergência.">
-    <link rel="stylesheet" type="text/css" href="css/styles.css">
+    <link rel="stylesheet" type="text/css" href="css/styles.css?v=2">
     <link rel="shortcut icon" href="imgs/favicon.png" type="image/x-icon">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
@@ -152,11 +153,11 @@
             <div class="logo">
                 <img src="./imgs/logo.png" alt="Logo Virtual MedClin">
             </div>
-            <div class="normal-menu">
+            <div class="normal-menu" style="padding-left: 160px">
                 <ul>
                     <li><a class="about-nav" href="#">Sobre</a></li>
                     <li><a class="differential-nav" href="#">Diferências</a></li>
-                    <li><a class="comments-nav" href="#">Depoimentos</a></li>
+                    <!-- <li><a class="comments-nav" href="#">Depoimentos</a></li> -->
                     <li><a class="common-questions-nav" href="#">Perguntas Frequentes</a></li>
                     <li><a href="https://consultorio.virtualmedclin.com.br/login">Fazer Login</a></li>
                 </ul>
@@ -242,37 +243,37 @@
                         <img src="./imgs/icon-hand-plus.svg" alt="Virtual MedClin é mais vantagens!">
                     </div>
                     <p>
-                        Priorize sua saúde sem comprometer seu bolso! Nossos planos de atendimento
+                        <!-- Priorize sua saúde sem comprometer seu bolso! Nossos planos de atendimento
                         imediato oferecem a combinação perfeita entre qualidade médica e preços acessíveis.
                         Oferecemos uma jornada rumo ao bem-estar com valores que cabem no seu orçamento.
-                        Faça a escolha inteligente e transforme a sua saúde agora mesmo!
+                        Faça a escolha inteligente e transforme a sua saúde agora mesmo! -->
                     </p>
                 </div>
             </div>
             <div>
-                <div class="content-image">
+                <div class="content-image m-plan">
                     <img src="./imgs/our-plans-image.png" alt="Veja nossos planos">
                 </div>
                 <div class="content-plans">
-                    <div class="select-plan">
+                    <div class="select-plan  m-plan" style="margin-left: -21px;">
                         <div>
                             <h3>Valores</h3>
                             <span>Preços que cabem no seu bolso para <br />atender você e sua família</span>
                         </div>
-                        <div>
+                        <div style="padding-left: 42px;">
                             <span>Selecione seu plano:</span>
                             <div>
                                 <button action="button" data-hide="in-cash" data-show="installments"
-                                    class="plan-inactive">Valor Parcelado</button>
+                                    class="plan-active">Pagamento<br/>parcelado</button>
                                 <button action="button" data-hide="installments" data-show="in-cash"
-                                    class="plan-active">Valor à Vista</button>
+                                    class="plan-inactive">Pagamento <br/>à vista</button>
                             </div>
                         </div>
                     </div>
-                    <div class="in-cash">
+                    <div class="in-cash plans-hide m-plan">
                         <div class="plan">
                             <header>
-                                <h3>ANUAL</h3>
+                                <h3>PLANO ANUAL</h3>
                                 <span>À vista - 2 Meses grátis</span>
                             </header>
                             <div>
@@ -303,7 +304,7 @@
                         </div>
                         <div class="plan">
                             <header>
-                                <h3>SEMESTRAL</h3>
+                                <h3>PLANO SEMESTRAL</h3>
                                 <span>À Vista - 1 Mês grátis</span>
                             </header>
                             <div>
@@ -333,10 +334,10 @@
                                 action="button">Contratar Plano</button>
                         </div>
                     </div>
-                    <div class="installments plans-hide">
+                    <div class="installments">
                         <div class="plan">
                             <header>
-                                <h3>ANUAL</h3>
+                                <h3>PLANO ANUAL</h3>
                                 <span>Parcelado em 12x de</span>
                             </header>
                             <div>
@@ -367,7 +368,7 @@
                         </div>
                         <div class="plan">
                             <header>
-                                <h3>SEMESTRAL</h3>
+                                <h3>PLANO SEMESTRAL</h3>
                                 <span>Parcelado em 6x de</span>
                             </header>
                             <div>
@@ -441,7 +442,7 @@
             </div>
         </div>
     </div>
-    <div id="comments">
+    <div id="comments" style="display: none;">
         <div class="content">
             <div class="content-title">
                 <h1>
