@@ -212,7 +212,7 @@ body
 
             .content-title
                 display: flex
-                flex-direction: row
+                flex-direction: column
                 justify-content: space-between
                 align-items: flex-start
                 height: 550px
@@ -232,29 +232,32 @@ body
                     margin-top: 45px
                     width: 100px
 
-            .content-explanation
-                display: flex
-                flex-direction: column
-                justify-content: center
-                align-items: center
-                background: $primary-color
-                margin: 0 45px
-                margin-top: -250px
-                padding: 60px
-                border-radius: 50px
+                .content-explanation
+                    display: flex
+                    flex-direction: column
+                    justify-content: center
+                    align-items: center
+                    background: $primary-color
+                    margin: 0 45px
+                    margin-top: 100px
+                    padding: 60px
+                    border-radius: 50px
 
-                > img
-                    width: 140px
-                    margin-bottom: 50px
+                    > img
+                        width: 140px
+                        margin-bottom: 50px
 
-                > p
-                    font-family: $font-text
-                    font-size: 35px
-                    text-align: center
-                    line-height: 60px
-                    font-style: normal
-                    font-weight: 400
-                    color: #FFF
+                    > p
+                        font-family: $font-text
+                        font-size: 35px
+                        text-align: center
+                        line-height: 60px
+                        font-style: normal
+                        font-weight: 400
+                        color: #FFF
+
+            .content-image
+                display: none
 
             .content-plans
                 display: flex
@@ -262,90 +265,97 @@ body
                 justify-content: center
                 align-items: center
                 padding: 0 45px
+                margin-top: 400px
 
-                .plan
-                    display: flex
-                    flex-direction: column
-                    justify-content: center
-                    align-items: center
-                    width: 80%
-                    margin-top: 50px
-                    border-radius: 50px
-                    padding-bottom: 30px
-                    -webkit-box-shadow: 0px 0px 49px -16px rgba(0,0,0,0.75)
-                    -moz-box-shadow: 0px 0px 49px -16px rgba(0,0,0,0.75)
-                    box-shadow: 0px 0px 49px -16px rgba(0,0,0,0.75)
-                    background-color: #FFF
+                .select-plan
+                    display: none
 
-                    header
-                        border-radius: 50px 50px 0 0
-                        display: flex
-                        flex-direction: column
-                        justify-content: center
-                        align-items: center
-                        background-color: $primary-color
-                        color: #FFF
-                        padding: 50px 0
-                        width: 100%
-                        font-family: $font-text
-                        font-size: 50px
+                .in-cash, .installments
+                    width: 90%
 
-                        span
-                            margin-top: 15px
-                            font-weight: lighter
-
-                    > div
+                    .plan
                         display: flex
                         flex-direction: column
                         justify-content: center
                         align-items: center
                         width: 100%
+                        margin-top: 50px
+                        border-radius: 50px
+                        padding-bottom: 30px
+                        -webkit-box-shadow: 0px 0px 49px -16px rgba(0,0,0,0.75)
+                        -moz-box-shadow: 0px 0px 49px -16px rgba(0,0,0,0.75)
+                        box-shadow: 0px 0px 49px -16px rgba(0,0,0,0.75)
                         background-color: #FFF
 
-                        .price
+                        header
+                            border-radius: 50px 50px 0 0
                             display: flex
-                            flex-wrap: nowrap
+                            flex-direction: column
                             justify-content: center
                             align-items: center
-                            padding-top: 30px
-
-                            sup
-                                font-family: $font-text
-                                color: $normal-text-color
-                                font-size: 40px
-                                padding-top: 30px
-                                float: left
+                            background-color: $primary-color
+                            color: #FFF
+                            padding: 50px 0
+                            width: 100%
+                            font-family: $font-text
+                            font-size: 50px
 
                             span
-                                font-family: $font-title
-                                font-size: 150px
-                                color: $secondary-color
+                                margin-top: 15px
+                                font-weight: lighter
 
-                            sub
-                                font-family: $font-title
-                                font-size: 80px
-                                color: $secondary-color
+                        > div
+                            display: flex
+                            flex-direction: column
+                            justify-content: center
+                            align-items: center
+                            width: 100%
+                            background-color: #FFF
 
-                        .services
-                            padding: 30px 50px
-                            text-align: center
+                            .price
+                                display: flex
+                                flex-wrap: nowrap
+                                justify-content: center
+                                align-items: center
+                                padding-top: 30px
+
+                                sup
+                                    font-family: $font-text
+                                    color: $normal-text-color
+                                    font-size: 40px
+                                    padding-top: 30px
+                                    float: left
+
+                                span
+                                    font-family: $font-title
+                                    font-size: 150px
+                                    color: $secondary-color
+
+                                sub
+                                    font-family: $font-title
+                                    font-size: 80px
+                                    color: $secondary-color
+
+                            .services
+                                padding: 30px 50px
+                                text-align: center
+                                font-family: $font-text
+                                font-size: 43px
+                                color: #6B6B6B
+
+                                p
+                                    padding: 30px 0
+                                    font-weight: 350
+
+                        button
+                            background-color: $secondary-color
+                            color: #FFF
+                            border-width: 0px
+                            border-radius: 15px
+                            padding: 30px 0
                             font-family: $font-text
-                            font-size: 43px
-                            color: #6B6B6B
-
-                            p
-                                padding: 30px 0
-                                font-weight: 350
-
-                    button
-                        background-color: $secondary-color
-                        color: #FFF
-                        border-width: 0px
-                        border-radius: 15px
-                        padding: 30px 0
-                        font-family: $font-text
-                        font-size: 50px
-                        width: 90%
+                            font-size: 50px
+                            width: 90%
 
     #differential
         display: flex

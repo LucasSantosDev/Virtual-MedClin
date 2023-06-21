@@ -159,7 +159,7 @@ body {
     padding: 0 0 130px 0; }
     #our-plans .content .content-title {
       display: flex;
-      flex-direction: row;
+      flex-direction: column;
       justify-content: space-between;
       align-items: flex-start;
       height: 550px;
@@ -176,106 +176,113 @@ body {
       #our-plans .content .content-title > img {
         margin-top: 45px;
         width: 100px; }
-    #our-plans .content .content-explanation {
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-      background: #31B5DA;
-      margin: 0 45px;
-      margin-top: -250px;
-      padding: 60px;
-      border-radius: 50px; }
-      #our-plans .content .content-explanation > img {
-        width: 140px;
-        margin-bottom: 50px; }
-      #our-plans .content .content-explanation > p {
-        font-family: "Roboto";
-        font-size: 35px;
-        text-align: center;
-        line-height: 60px;
-        font-style: normal;
-        font-weight: 400;
-        color: #FFF; }
+      #our-plans .content .content-title .content-explanation {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        background: #31B5DA;
+        margin: 0 45px;
+        margin-top: 100px;
+        padding: 60px;
+        border-radius: 50px; }
+        #our-plans .content .content-title .content-explanation > img {
+          width: 140px;
+          margin-bottom: 50px; }
+        #our-plans .content .content-title .content-explanation > p {
+          font-family: "Roboto";
+          font-size: 35px;
+          text-align: center;
+          line-height: 60px;
+          font-style: normal;
+          font-weight: 400;
+          color: #FFF; }
+    #our-plans .content .content-image {
+      display: none; }
     #our-plans .content .content-plans {
       display: flex;
       flex-direction: column;
       justify-content: center;
       align-items: center;
-      padding: 0 45px; }
-      #our-plans .content .content-plans .plan {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        width: 80%;
-        margin-top: 50px;
-        border-radius: 50px;
-        padding-bottom: 30px;
-        -webkit-box-shadow: 0px 0px 49px -16px rgba(0, 0, 0, 0.75);
-        -moz-box-shadow: 0px 0px 49px -16px rgba(0, 0, 0, 0.75);
-        box-shadow: 0px 0px 49px -16px rgba(0, 0, 0, 0.75);
-        background-color: #FFF; }
-        #our-plans .content .content-plans .plan header {
-          border-radius: 50px 50px 0 0;
-          display: flex;
-          flex-direction: column;
-          justify-content: center;
-          align-items: center;
-          background-color: #31B5DA;
-          color: #FFF;
-          padding: 50px 0;
-          width: 100%;
-          font-family: "Roboto";
-          font-size: 50px; }
-          #our-plans .content .content-plans .plan header span {
-            margin-top: 15px;
-            font-weight: lighter; }
-        #our-plans .content .content-plans .plan > div {
+      padding: 0 45px;
+      margin-top: 400px; }
+      #our-plans .content .content-plans .select-plan {
+        display: none; }
+      #our-plans .content .content-plans .in-cash, #our-plans .content .content-plans .installments {
+        width: 90%; }
+        #our-plans .content .content-plans .in-cash .plan, #our-plans .content .content-plans .installments .plan {
           display: flex;
           flex-direction: column;
           justify-content: center;
           align-items: center;
           width: 100%;
+          margin-top: 50px;
+          border-radius: 50px;
+          padding-bottom: 30px;
+          -webkit-box-shadow: 0px 0px 49px -16px rgba(0, 0, 0, 0.75);
+          -moz-box-shadow: 0px 0px 49px -16px rgba(0, 0, 0, 0.75);
+          box-shadow: 0px 0px 49px -16px rgba(0, 0, 0, 0.75);
           background-color: #FFF; }
-          #our-plans .content .content-plans .plan > div .price {
+          #our-plans .content .content-plans .in-cash .plan header, #our-plans .content .content-plans .installments .plan header {
+            border-radius: 50px 50px 0 0;
             display: flex;
-            flex-wrap: nowrap;
+            flex-direction: column;
             justify-content: center;
             align-items: center;
-            padding-top: 30px; }
-            #our-plans .content .content-plans .plan > div .price sup {
-              font-family: "Roboto";
-              color: #3E3E3E;
-              font-size: 40px;
-              padding-top: 30px;
-              float: left; }
-            #our-plans .content .content-plans .plan > div .price span {
-              font-family: "Lato";
-              font-size: 150px;
-              color: #EB9B02; }
-            #our-plans .content .content-plans .plan > div .price sub {
-              font-family: "Lato";
-              font-size: 80px;
-              color: #EB9B02; }
-          #our-plans .content .content-plans .plan > div .services {
-            padding: 30px 50px;
-            text-align: center;
+            background-color: #31B5DA;
+            color: #FFF;
+            padding: 50px 0;
+            width: 100%;
             font-family: "Roboto";
-            font-size: 43px;
-            color: #6B6B6B; }
-            #our-plans .content .content-plans .plan > div .services p {
-              padding: 30px 0;
-              font-weight: 350; }
-        #our-plans .content .content-plans .plan button {
-          background-color: #EB9B02;
-          color: #FFF;
-          border-width: 0px;
-          border-radius: 15px;
-          padding: 30px 0;
-          font-family: "Roboto";
-          font-size: 50px;
-          width: 90%; }
+            font-size: 50px; }
+            #our-plans .content .content-plans .in-cash .plan header span, #our-plans .content .content-plans .installments .plan header span {
+              margin-top: 15px;
+              font-weight: lighter; }
+          #our-plans .content .content-plans .in-cash .plan > div, #our-plans .content .content-plans .installments .plan > div {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            width: 100%;
+            background-color: #FFF; }
+            #our-plans .content .content-plans .in-cash .plan > div .price, #our-plans .content .content-plans .installments .plan > div .price {
+              display: flex;
+              flex-wrap: nowrap;
+              justify-content: center;
+              align-items: center;
+              padding-top: 30px; }
+              #our-plans .content .content-plans .in-cash .plan > div .price sup, #our-plans .content .content-plans .installments .plan > div .price sup {
+                font-family: "Roboto";
+                color: #3E3E3E;
+                font-size: 40px;
+                padding-top: 30px;
+                float: left; }
+              #our-plans .content .content-plans .in-cash .plan > div .price span, #our-plans .content .content-plans .installments .plan > div .price span {
+                font-family: "Lato";
+                font-size: 150px;
+                color: #EB9B02; }
+              #our-plans .content .content-plans .in-cash .plan > div .price sub, #our-plans .content .content-plans .installments .plan > div .price sub {
+                font-family: "Lato";
+                font-size: 80px;
+                color: #EB9B02; }
+            #our-plans .content .content-plans .in-cash .plan > div .services, #our-plans .content .content-plans .installments .plan > div .services {
+              padding: 30px 50px;
+              text-align: center;
+              font-family: "Roboto";
+              font-size: 43px;
+              color: #6B6B6B; }
+              #our-plans .content .content-plans .in-cash .plan > div .services p, #our-plans .content .content-plans .installments .plan > div .services p {
+                padding: 30px 0;
+                font-weight: 350; }
+          #our-plans .content .content-plans .in-cash .plan button, #our-plans .content .content-plans .installments .plan button {
+            background-color: #EB9B02;
+            color: #FFF;
+            border-width: 0px;
+            border-radius: 15px;
+            padding: 30px 0;
+            font-family: "Roboto";
+            font-size: 50px;
+            width: 90%; }
   #differential {
     display: flex;
     flex-direction: column;
